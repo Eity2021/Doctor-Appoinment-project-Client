@@ -2,7 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Use technology
+
+- React Router
+- Tailwind css
 
 In the project directory, you can run:
 
