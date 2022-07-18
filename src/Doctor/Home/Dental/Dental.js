@@ -1,5 +1,6 @@
 import React from "react";
 import treament from "../../images/treatment.png";
+import PrimaryButton from './../../Share/PrimaryButton/PrimaryButton';
 const Dental = () => {
   return (
     <div>
@@ -21,7 +22,7 @@ const Dental = () => {
               here', making it look like readable English. Many desktop
               publishing packages and web page
             </p>
-            <button class="btn btn-primary uppercase">Get Started</button>
+            <PrimaryButton>get started</PrimaryButton>
           </div>
         </div>
       </div>
