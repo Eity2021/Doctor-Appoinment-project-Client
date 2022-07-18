@@ -33,13 +33,13 @@ const Header = () => {
           </Link>
           <Link
             className=" lg:inline block appointment font-semibold text-sm px-4 py-3 rounded-md  hover:bg-success hover:text-info hover:transition ease-in-out delay-150"
-            to="/"
+            to="/appointment"
           >
             Appointment
           </Link>
           <Link
             className=" lg:inline block reviews font-semibold text-sm px-4 py-3 rounded-md  hover:bg-success hover:text-info hover:transition ease-in-out delay-150"
-            to="/"
+            to="/reviews"
           >
             Reviews
           </Link>
