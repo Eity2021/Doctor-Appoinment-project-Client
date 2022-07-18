@@ -4,12 +4,11 @@ import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 
 const Header = () => {
-
   const [open, setOpen] = useState(false);
 
   return (
     <div>
-      <nav className="flex justify-between px-11 py-4 relative">
+      <nav className="flex justify-between px-11 py-4 relative z-10">
         <div>
           <Link className="font-bold font-sans text-xl" to="/">
             Doctor's Appointment
