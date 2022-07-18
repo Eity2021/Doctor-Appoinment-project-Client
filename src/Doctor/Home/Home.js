@@ -1,14 +1,12 @@
 import React from "react";
+import Header from "../Share/Header/Header";
 
 const Home = () => {
   return (
-    <div>
+    <div >
+      <Header></Header>
       <h1>this is home page page</h1>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-
-    <button class="btn btn-primary">Button</button>
+     
     </div>
   );
 };

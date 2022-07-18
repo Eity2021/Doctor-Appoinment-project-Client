@@ -1,9 +1,12 @@
 import React from 'react';
+import Header from '../Share/Header/Header';
 
 const Appointment = () => {
     return (
         <div>
-               <h1>this is Appointment page</h1>
+            <Header></Header>
+               <h1>this is Appointment pag</h1>
+               
         </div>
     );
 };
