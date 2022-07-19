@@ -18,6 +18,7 @@ module.exports = {
           "base-100": "#ffffff",
           "info": "#fff",
           "success": "#3A4256",
+          
         },
       },
      

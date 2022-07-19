@@ -1,14 +1,15 @@
-import React from 'react';
-import Header from '../Share/Header/Header';
+import React from "react";
+import Footer from "../Share/Footer/Footer";
+import AppointmentBanner from "./AppointmentBanner/AppointmentBanner";
 
 const Appointment = () => {
-    return (
-        <div>
-            <Header></Header>
-               <h1>this is Appointment pag</h1>
-               
-        </div>
-    );
+  return (
+    <div>
+      <AppointmentBanner></AppointmentBanner>
+
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default Appointment;
