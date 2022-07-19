@@ -5,7 +5,7 @@ import marker from "../../icons/marker.svg";
 import phone from "../../icons/phone.svg";
 const Info = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-12 mb-24">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:px-12 mb-24 mt-24">
       <InfoCard
         carTitle="Opening Hours"
         cardInfo="Lorem Ipsum is simply dummy text of the pri"
@@ -16,7 +16,7 @@ const Info = () => {
         carTitle="Visit our location"
         cardInfo="Brooklyn, NY 10036, United States"
         img={marker}
-        bgColor="bg-[#3A4256]"
+        bgColor="bg-accent"
       ></InfoCard>
       <InfoCard
         carTitle="Contact Us now"
