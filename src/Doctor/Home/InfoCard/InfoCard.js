@@ -1,16 +1,17 @@
 import React from "react";
 
-const InfoCard = ({img,carTitle, cardInfo,bgColor}) => {
+const InfoCard = ({ img, carTitle, cardInfo, bgColor }) => {
   return (
     <div>
-      <div class={`card card-side bg-base-100 shadow-xl ${bgColor} h-[162px]`}>
+      <div
+        className={`card card-side bg-base-100 shadow-xl ${bgColor} h-[162px]`}
+      >
         <figure className="pl-5">
           <img src={img} alt="img" />
         </figure>
-        <div class="card-body font-info lg:mt-4">
-          <h2 class="card-title text-info">{carTitle}</h2>
+        <div className="card-body font-info lg:mt-4">
+          <h2 className="card-title text-info">{carTitle}</h2>
           <p className="text-info">{cardInfo}</p>
-          
         </div>
       </div>
     </div>
@@ -18,4 +19,3 @@ const InfoCard = ({img,carTitle, cardInfo,bgColor}) => {
 };
 
 export default InfoCard;
-

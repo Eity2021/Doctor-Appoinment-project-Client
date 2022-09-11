@@ -3,10 +3,10 @@ import Appointment from "../images/appointment.png";
 import PrimaryButton from "../Share/PrimaryButton/PrimaryButton";
 const ContactUs = () => {
   return (
-    <section  className="bg-no-repeat"
+    <section
+      className="bg-no-repeat"
       style={{
         background: `url(${Appointment})`,
-    
       }}
     >
       <div className="text-center">
@@ -23,18 +23,21 @@ const ContactUs = () => {
             <input
               type="text"
               placeholder="Email Address"
-              class="input w-full max-w-xs mb-3"
+              className="input w-full max-w-xs mb-3"
             />
           </div>
           <div>
             <input
               type="text"
               placeholder="Subject"
-              class="input w-full max-w-xs mb-3"
+              className="input w-full max-w-xs mb-3"
             />
           </div>
           <div>
-            <textarea class="textarea  w-full max-w-xs" placeholder="your message "></textarea>
+            <textarea
+              className="textarea  w-full max-w-xs"
+              placeholder="your message "
+            ></textarea>
           </div>
           <div>
             <PrimaryButton>Submit</PrimaryButton>
