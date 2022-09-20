@@ -48,7 +48,7 @@ const BookingModal = ({ treatment, setTreatment, date,refetch }) => {
           );
         }
       });
-      refetch();
+    refetch();
     setTreatment("");
   };
   return (

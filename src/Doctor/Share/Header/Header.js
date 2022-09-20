@@ -12,6 +12,7 @@ const Header = () => {
 
   const logout = () => {
     signOut(auth);
+    localStorage.removeItem("accessToken");
   };
   return (
     <div>
@@ -56,14 +57,14 @@ const Header = () => {
           >
             Contact Us
           </Link>
-          {
-            user && <Link
-            className=" lg:inline block font-semibold text-sm px-4 py-3 rounded-md  hover:bg-success hover:text-info hover:transition ease-in-out delay-150"
-            to="/dashboard"
-          >
-            Dashboard
-          </Link>
-          }
+          {user && (
+            <Link
+              className=" lg:inline block font-semibold text-sm px-4 py-3 rounded-md  hover:bg-success hover:text-info hover:transition ease-in-out delay-150"
+              to="/dashboard"
+            >
+              Dashboard
+            </Link>
+          )}
           {user ? (
             <button
               className=" lg:inline block font-semibold text-sm px-4 py-3 rounded-md  hover:bg-success hover:text-info hover:transition ease-in-out delay-150"
@@ -87,16 +88,18 @@ const Header = () => {
             {open ? <ImCross /> : <></>}
           </div>
         </div>
-        <div onClick={() => setOpen(!open)} className="lg:hidden absolute top-6 left-3">
+        <div
+          onClick={() => setOpen(!open)}
+          className="lg:hidden absolute top-6 left-3"
+        >
           {!open ? <FaBars /> : <></>}
         </div>
 
         <div>
-        <label for="sideBar" class=" lg:hidden ">
-          <FaBars />
+          <label for="sideBar" className=" lg:hidden ">
+            <FaBars />
           </label>
         </div>
-         
       </nav>
     </div>
   );

@@ -7,12 +7,16 @@ import auth from "../firebase.init";
 import { CircleLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
+import useToken from "../../hook/useToken";
+import { useEffect } from "react";
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+
+  const [token] = useToken(user);
   const navigate = useNavigate();
   let location = useLocation();
-  let from = location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || "/Appointment";
 
   let signInError;
   const {
@@ -26,9 +30,12 @@ const Login = () => {
     console.log(data);
   };
 
-  if (user) {
-    navigate(from, { replace: true });
-  }
+  useEffect(() => {
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [token,from,navigate]);
+
   if (loading) {
     return (
       <div className="flex justify-center items-center mt-center mt-52">
