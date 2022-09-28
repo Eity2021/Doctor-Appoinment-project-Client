@@ -5,8 +5,8 @@ import useAdmin from "../../hook/useAdmin";
 import auth from "../firebase.init";
 
 const Dashboard = () => {
- const [user] = useAuthState(auth);
-  const [admin] = useAdmin(user); 
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
 
   return (
     <div>
@@ -24,7 +24,13 @@ const Dashboard = () => {
             </li>
             <li>
               <Link to="/dashboard/review">My Reviews</Link>
-             {admin && <Link to="/dashboard/AllUsers">All Users</Link>}
+              {admin && (
+                <>
+                  <Link to="/dashboard/AllUsers">All Users</Link>
+                  <Link to="/dashboard/addDoctor">Add A Doctor</Link>
+                  <Link to="/dashboard/manageDoctor">Manage Doctor</Link>
+                </>
+              )}
             </li>
           </ul>
         </div>
