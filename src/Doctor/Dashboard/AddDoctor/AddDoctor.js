@@ -8,7 +8,7 @@ const AddDoctor = () => {
   const {
     register,
     handleSubmit,
-    watch,
+    // watch,
     formState: { errors },
   } = useForm();
 
@@ -132,7 +132,7 @@ const AddDoctor = () => {
             <span className="label-text ml-8">Specialty</span>
           </label>
           <select
-            {...register("Specialty")}
+            {...register("specialty")}
             className="input-bordered select w-full max-w-xs"
           >
             {services.map((service) => (
@@ -167,7 +167,7 @@ const AddDoctor = () => {
             </label>
           </div>
           {/* add doctor */}
-          <input className="btn w-full max-w-xs" type="submit" value="SIGNUP" />
+          <input className="btn w-full max-w-xs" type="submit" value="Add Doctor" />
         </form>
       </div>
     </div>
