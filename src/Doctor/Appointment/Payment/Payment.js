@@ -14,13 +14,15 @@ const Payment = () => {
 
   const url = `http://localhost:8000/booking/${payment_id}`;
 
-  const { data: appointment, isLoading } = useQuery("payment", () =>
-    fetch(url, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    }).then((res) => res.json())
+  const { data: appointment, isLoading } = useQuery(
+    ['booking', payment_id],
+    () =>
+      fetch(url, {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }).then((res) => res.json())
   );
 
   if (isLoading) {

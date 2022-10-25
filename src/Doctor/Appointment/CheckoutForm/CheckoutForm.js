@@ -33,7 +33,7 @@ const CheckoutForm = ({ appointment }) => {
     event.preventDefault();
 
     const card = elements.getElement(CardElement);
-    if (elements == null) {
+    if (card == null) {
       return;
     }
 
@@ -63,7 +63,7 @@ const CheckoutForm = ({ appointment }) => {
     } else {
       setErrorMessage("");
       setTransactionId(paymentIntent.id);
-      setSuccessMessage("congrats ,Your Payment is complete");
+      setSuccessMessage("congrats! Your Payment is complete");
       const payment = {
         appointment: _id,
         transactionId: paymentIntent.id,
