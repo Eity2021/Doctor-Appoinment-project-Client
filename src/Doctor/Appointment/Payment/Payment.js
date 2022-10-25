@@ -15,7 +15,7 @@ const Payment = () => {
   const url = `http://localhost:8000/booking/${payment_id}`;
 
   const { data: appointment, isLoading } = useQuery(
-    ['booking', payment_id],
+    ["booking", payment_id],
     () =>
       fetch(url, {
         method: "GET",
@@ -30,9 +30,9 @@ const Payment = () => {
   }
   return (
     <div className="grid justify-center">
-      <div class="card w-96 bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title">Hello, {appointment.treatment}</h2>
+      <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card-body">
+          <h2 className="card-title">Hello, {appointment.treatment}</h2>
           <span>
             Your Appointment{" "}
             <span className="text-primary">{appointment.date}</span> at
@@ -42,8 +42,8 @@ const Payment = () => {
         </div>
       </div>
 
-      <div class="card w-96 bg-base-100 shadow-xl mt-6">
-        <div class="card-body">
+      <div className="card w-96 bg-base-100 shadow-xl mt-6">
+        <div className="card-body">
           <Elements stripe={stripePromise}>
             <CheckoutForm appointment={appointment} />
           </Elements>
