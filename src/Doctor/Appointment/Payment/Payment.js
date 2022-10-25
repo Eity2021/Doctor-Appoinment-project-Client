@@ -36,14 +36,14 @@ const Payment = () => {
             <span className="text-primary">{appointment.date}</span> at
             {appointment.slots}
           </span>
-          <span>Please Pay : {appointment.price}</span>
+          <span>Please Pay :${appointment.price}</span>
         </div>
       </div>
 
       <div class="card w-96 bg-base-100 shadow-xl mt-6">
         <div class="card-body">
           <Elements stripe={stripePromise}>
-            <CheckoutForm appointment={appointment}/>
+            <CheckoutForm appointment={appointment} />
           </Elements>
         </div>
       </div>

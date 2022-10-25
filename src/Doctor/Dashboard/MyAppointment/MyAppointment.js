@@ -15,7 +15,7 @@ const MyAppointment = () => {
       fetch(`http://localhost:8000/booking?patientEmail=${user.email}`, {
         method: "GET",
         headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          'authorization': `Bearer ${localStorage.getItem("accessToken")}`,
         },
       })
         .then((res) => {
@@ -31,7 +31,7 @@ const MyAppointment = () => {
           setAppointments(data);
         });
     }
-  }, [user]);
+  }, [navigate, user]);
   return (
     <div>
       <h1 className="my-2">My Appointments : {Appointments.length}</h1>
@@ -50,22 +50,24 @@ const MyAppointment = () => {
           </thead>
           <tbody>
             {Appointments.map((appoint, index) => (
-              <tr>
-                <th>{index + 1}</th>
-                <th>{appoint.patientName}</th>
+              <tr key={appoint._id}>
+                <td>{index + 1}</td>
+                <td>{appoint.patientName}</td>
                 <td>{appoint.date}</td>
                 <td>{appoint.slots}</td>
                 <td>{appoint.treatment}</td>
+
                 <td>
                   {appoint.price && !appoint.paid && (
                     <Link to={`/dashboard/payment/${appoint._id}`}>
-                      <button className="bg-">Pay</button>
+                      <button className="btn btn-xs btn-success">pay</button>
                     </Link>
                   )}
+
                   {appoint.price && appoint.paid && (
-                    <Link>
-                      <span>Paid</span>
-                    </Link>
+                    <p>
+                      <span className="text-success">Paid</span>
+                    </p>
                   )}
                 </td>
               </tr>
